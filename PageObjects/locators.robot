@@ -74,12 +74,15 @@ ${DESCRIPTION}  //*[@id="app"]/div[2]/div/div/div[2]/div/div[4]/div/form/div[1]/
 ${COLUMNCONTINUE}  //*[@id="app"]/div[2]/div/div/div[2]/div/div[3]/div/div/div[2]/button/div
 ${MODELMENU}  //*[@id="app"]/div[7]/div[1]/main/div/div/div[3]/div/div/div/div/div/nav/div/div[3]/div/button/div/i
 ${CONTINUESCRATCH}  //*[@id="app"]/div[2]/div/div/div[2]/div/div[4]/div/form/div[2]/button/div
-${DELETE}  //*[@id="app"]/div[3]/div/div/div[2]/a/div[1]/div
-${SUREDELETE}  //*[@id="app"]/div[3]/div/div/div[3]/button/div
+${DELETE}  //*[@id="delete-button"]/div[1]/div
+#delete #//*[@id="app"]/div[3]/div/div/div[2]/a/div[1]/div
+${SUREDELETE}  //*[@id="app"]/div[6]/div/div/div[3]/button/div
+#${SUREDELETE}  //*[@id="app"]/div[3]/div/div/div[3]/button/div
 ${ATTRIBUTSTRINGTEAMKATTUGGLA}  //*[@id="app"]/div[6]/div[1]/nav/div/div[3]/div/button/div/span
 ${USERACCOUNT}  //*[@id="app"]/div[6]/div[1]/nav/div/div[4]/div/button/div/div/span
 ${ACCOUNTLIST}  //*[@id="app"]/div[5]/div
 ${LOGOUT}  //*[@id="app"]/div[5]/div/div[3]/div/a/div[1]/div
+${stagLoginPage}  //https://stag.labelf.ai/login
 ${WINDOW}  window-size=1920,1080
 ${MYWORKSPACE}  //*[@id="app"]/div[3]/div/div[2]/div[3]/a/div[1]
 ${TEAMKATTUGGLAWORKSPACE}  //*[@id="app"]/div[3]/div/div[2]/div[5]/a/div[1]
@@ -117,3 +120,19 @@ ${StringNumberAfter}   //*[@id="app"]/div[10]/div[1]/main/div/div/div[3]/div/div
 ${StringNumberAfterAddDataSet}  //*[@id="app"]/div[10]/div[1]/main/div/div/div[3]/div/div[1]/div/div/div/nav/div/span[3]
 ${CustomerServiceResponseDataSet}  //*[@id="app"]/div[7]/div[1]/main/div/div/div[2]/div/div[1]/div/div[6]/div/div[2]/div/div/div[2]/div/div/div[1]
 ${NumberTextBefore}  //*[@id="app"]/div[10]/div[1]/main/div/div/div[3]/div/div[3]/div/div/div/nav/div/span[2]
+
+#SingleLabeling-1.robot
+${CHOOSEMODEL}  //*[@id="app"]/div[7]/div[1]/main/div/div/div[3]/div/div/div/div/div/nav/div/div[1]/a
+${STARTTRAINING}  //*[@id="app"]/div[8]/div[1]/main/div/div/div[1]/div/div/div/div/nav/div/a[6]/div
+${ADDLABEL}  //*[@id="app"]/div[9]/div/div[1]/div[4]/div/div/span/div[2]/div/div[2]/div/div/button/div/span
+${NEWLABELNAME}  //*[@id="app"]/div[10]/div/div[1]/div[4]/div/div/span/div[2]/div[2]/form/div[1]/div/div/div[1]/div/div/div[1]/div/input
+${ADDONELABEL}  //*[@id="app"]/div[10]/div/div[1]/div[4]/div/div/span/div[2]/div[2]/form/div[2]/button/div
+${NAMEONFIRSTLABEL}  //*[@id="app"]/div[13]/div/div[1]/div[4]/div/div/span/div[2]/div/div[2]/div/div/button[1]/div
+${ADDSECONDLABEL}  //*[@id="app"]/div[13]/div/div[1]/div[4]/div/div/span/div[2]/div/div[2]/div/div/button[2]/div/span
+${CHOOSESINGLE}  //*[@id="app"]/div[14]/div/div/div[3]/button[1]/div
+${INPUTTEXTLABEL}   //*[@id="app"]/div[14]/div/div[1]/div[4]/div/div/span/div[2]/div[2]/form/div[1]/div/div/div[1]/div/div/div[1]/div/input
+${INPUTTEXTLABEL2}  //*[@id="app"]/div[14]/div/div[1]/div[4]/div/div/span/div[2]/div[2]/form/div[1]/div/div/div[1]/div/div/div[1]/div/input
+${ADDEDSECONDLABELDONE}  //*[@id="app"]/div[14]/div/div[1]/div[4]/div/div/span/div[2]/div[2]/form/div[2]/button/div
+${XBUTTON}  //*[@id="app"]/div[8]/div/div[1]/div[1]/div/div/nav/div/a/div/i
+${MODELBUTTON}  //*[@id="app"]/div[9]/div[1]/nav/div/a[1]/div
+${URL}   //https://stag.labelf.ai/login

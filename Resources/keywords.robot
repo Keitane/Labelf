@@ -334,7 +334,7 @@ User Can See All Labels
 Select Team Kattuggla As Workspace
     Go To  https://stag.labelf.ai/main/68/models/view
     Wait Until Page Contains  Team Kattuggla
-    Click Element  ${models_button}
+    #Click Element  ${models_button}  den är redan inne i models view...
     Reload Page
 #    Sleep  1s
 #    Wait Until Page Contains Element  ${MAINMENU}
@@ -373,9 +373,34 @@ User Adds Multiple Choice Label
     Wait Until Page Contains  Choose model type
     Sleep  1s
 
+#kattugla delete model
+Delete Model
+    Wait Until Page Contains  My Models
+    Wait Until Page Contains Element  ${MODELMENU}
+    Click Element  ${MODELMENU}
+    Wait Until Page Contains Element  ${DELETE}
+    Click Element   ${DELETE}
+    Sleep  1s
+    Wait Until Page Contains Element  ${SUREDELETE}
+    Click Element  ${SUREDELETE}
+    Sleep  1s
+
+#kattuggla log out user
+Log Out User
+    Sleep  1s
+    Wait Until Page Contains Element  ${USERACCOUNT}
+    Click Element  ${USERACCOUNT}
+    Wait Until Page Contains Element  ${ACCOUNTLIST}
+    Click Element  ${LOGOUT}
+    Wait Until Page Contains  Forgot your password?
+    #Location Should Be    #${stagLoginPage}
 Radio Buttons For Created Labels Is Shown
     Wait Until Page Contains  Katt
     Wait Until Page Contains  Uggla
 
 Multiple Choice Is Selected
     Click Element  ${MultipleChoiceButton}
+
+
+#Go To Stag Login Page
+#    Go To
