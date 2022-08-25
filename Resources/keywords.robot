@@ -73,9 +73,67 @@ Log in User
 
 #Kimchi Verify radio button
 Multiple Choice Is Provided As Option
-
     Wait Until Page Contains Element  ${MultipleChoiceButton}
     Wait Until Page Contains  Multiple Choice
+
+#Kimchi model is trained with multiple labels
+Model Is Trained with MultipleLables
+    Wait until Page Contains  Lets start by giving Labelf 20 samples
+    Page Should Contain Element  //div[contains(text(),'Uggla')]
+    #Click Element  ${SecondRadioButton}
+    Sleep   1s
+    Click Button  ${AddButton}
+    Wait until Page Contains  Lets start by giving Labelf 19 samples
+    Page Should Contain Element  //div[contains(text(),'Katt')]
+    #Click Element  ${FirstRadioButton}
+    Click Button  ${AddButton}
+    Wait until Page Contains  Lets start by giving Labelf 18 samples
+    Page Should Contain Element  //div[contains(text(),'Uggla')]
+    Page Should Contain Element  //div[contains(text(),'Katt')]
+    Click Element  ${FirstRadioButton}
+    Click Element  ${SecondRadioButton}
+    Click Button  ${AddButton}
+
+#Kimchi adding third label to model
+A Third Label Is Added To Model
+    Click element  xpath://span[contains(text(),'Add a label')]
+    Press Keys  //input[contains(@aria-label,'Name*')]  CTRL+A+DELETE
+    Input Text  //input[contains(@aria-label,'Name*')]  Zebra
+    Click element  //button[contains(.,'Add label')]
+
+#Kimchi all three labels
+All Labels Are Possible To Select
+    Wait until Page Contains  Lets start by giving Labelf 17 samples
+    Page should contain Element  //div[contains(text(),'Uggla')]
+    Page should contain Element  //div[contains(text(),'Zebra')]
+    Page should contain Element  //div[contains(text(),'Katt')]
+    Click Element  ${FirstRadioButton}
+    Click Element  ${SecondRadioButton}
+    Click Element  ${ThirdRadioButton}
+    Click Element  ${ThirdRadioButton}
+    Click Button  ${AddButton}
+
+#Kimchi model trained with three labels
+That Model Is Trained With Three Labels
+    Wait until Page Contains  Lets start by giving Labelf 16 samples
+
+#Kimchi navigate to model overview
+User Navigate To Model Overview
+    Go To   ${StagWorkspaceModelView}
+    Click Element  ${OverviewButton}
+    Wait Until Page Contains  Overview
+
+#Kimchi trained labels are shown in the report
+The Trained Labels Are Shown In Report
+    Scroll Element Into View  //*[contains(text(),'Connected Datasets')]
+    Wait Until Page Contains  Katt
+    Wait Until Page Contains  Uggla
+    Wait Until Page Contains  Fake News
+    Execute Javascript  window.scrollTo(0,1800)
+    Wait Until Element Is Visible   ${LabelsPieChart}
+    Wait Until Element contains  ${SliceEconomy}  50
+    Wait Until Element contains  ${SliceSport}  33.3
+    Wait Until Element contains  ${SliceFakeNews}  16.7
 
 #Kimchi Create Model
 Create Model
@@ -85,6 +143,7 @@ Create Model
     Set A Name And Description For Model
     Model Is Created On Workspace
     Model Description Is Presented In Model Overview
+
 User Clicks Button "New Model" And To Create A New Model From Scratch
      Wait Until Page Contains Element  ${new_model_button}
      Sleep  0.2
@@ -148,6 +207,7 @@ Set A Name And Description For Model
 
 Model Is Created On Workspace
      Page Should Contain   ${ModelName}
+
 Model Description Is Presented In Model Overview
     Page Should Contain  ${ModelDescription}
 
@@ -212,6 +272,7 @@ User Is Logged In, Have Changed Workspace And Created A Model
     Login Kimchi
     Create Model
     Sleep  30s
+
 User Adds Single Choice Labels
     Wait Until Page Contains Element  ${overview_button}
     Click Element  ${overview_button}
@@ -260,6 +321,7 @@ User Adds Single Choice Labels
     Sleep  1s
     Click Element  ${label_named_katt}
     Wait Until Page Contains  Only 15 more to go!
+
 User Can See All Labels
     Wait Until Page Contains Element  ${close_button}
     Sleep  1s
@@ -269,6 +331,7 @@ User Can See All Labels
     Click Element  ${MODELBUTTON}
     Wait Until Page Contains  Team Kimchi
     Delete Single Automated Test Model
+
 Select Team Kattuggla As Workspace
     Go To  https://stag.labelf.ai/main/68/models/view
     Wait Until Page Contains  Team Kattuggla

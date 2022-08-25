@@ -105,10 +105,10 @@ ${AddALabelButton}  //*[@id="app"]/div[4]/div/div[1]/div[4]/div/div/span/div/div
 ${AddLabelButton}  //*[@id="app"]/div[5]/div/div[1]/div[4]/div/div/span/div/div[2]/form/div[2]/button  #Adds label when you input label Name
 ${LabelsPieChart}  //*[@id="plotly"]/div[1]/div
 ${MultipleChoiceButton}  //button[contains(.,'Multiple Choice')]
-${AddButton}  //button[contains(.,' Add ')]
-${FirstRadioButton}  //*[@id="app"]/div[8]/div/div[1]/div[4]/div/div/span/div/div/div/div[2]/div/div[1]
-${SecondRadioButton}  //*[@id="app"]/div[8]/div/div[1]/div[4]/div/div/span/div/div/div/div[2]/div/div[2]
-${ThirdRadioButton}  //*[@id="app"]/div[8]/div/div[1]/div[4]/div/div/span/div/div/div/div[2]/div/div[3]
+${AddButton}   //*[@id="app"]/div[14]/div/div[1]/div[4]/div/div/button  #//button[contains(.,' Add ')]
+${FirstRadioButton}  //*[@id="app"]/div[5]/div/div[1]/div[4]/div/div/span/div/div/div/div[2]/div/div[1]/a/div[1]
+${SecondRadioButton}  //*[@id="app"]/div[5]/div/div[1]/div[4]/div/div/span/div/div/div/div[2]/div/div[2]/a/div[1]
+${ThirdRadioButton}  //*[@id="app"]/div[5]/div/div[1]/div[4]/div/div/span/div/div/div/div[2]/div/div[3]/a/div[1]
 ${LabelSwitchButton}  //*[@id="app"]/div[2]/div/div/div[2]/div/div[3]/div/div/nav/div/div[3]/div[2]/div[1]/div
 ${MultiplLabelsSwitchButton}  //*[@id="app"]/div[2]/div/div/div[2]/div/div[4]/div/div/nav/div/div[3]/div/div/div[1]/div
 #ExtendModelVerification
