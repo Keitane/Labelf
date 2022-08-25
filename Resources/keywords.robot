@@ -80,12 +80,11 @@ Multiple Choice Is Provided As Option
 Model Is Trained with MultipleLables
     Wait until Page Contains  Lets start by giving Labelf 20 samples
     Page Should Contain Element  //div[contains(text(),'Uggla')]
-    #Click Element  ${SecondRadioButton}
-    Sleep   1s
+    Click Element  ${SecondRadioButton}
     Click Button  ${AddButton}
     Wait until Page Contains  Lets start by giving Labelf 19 samples
     Page Should Contain Element  //div[contains(text(),'Katt')]
-    #Click Element  ${FirstRadioButton}
+    Click Element  ${FirstRadioButton}
     Click Button  ${AddButton}
     Wait until Page Contains  Lets start by giving Labelf 18 samples
     Page Should Contain Element  //div[contains(text(),'Uggla')]
