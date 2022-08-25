@@ -1,7 +1,10 @@
 *** Settings ***
+#Documentation  Testing labelf
 Library  SeleniumLibrary
+Resource  ../PageObjects/locators.robot
+Resource  ../PageObjects/variables.robot
 Resource  ../Resources/keywords.robot
-Resource  ../Resources/locators.robot
+Resource  ../Resources/SingleLabelingKeywords.robot
 
 Suite Setup  Start WebTest
 Suite Teardown  End WebTest

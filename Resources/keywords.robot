@@ -1,8 +1,9 @@
 *** Settings ***
-Resource  variables.robot
-Resource  locators.robot
-
-Library  ../Scripts/remove_text.py
+#Documentation  Testing labelf
+Library  SeleniumLibrary
+Resource  ../PageObjects/locators.robot
+Resource  ../PageObjects/variables.robot
+Resource  ../Resources/SingleLabelingKeywords.robot
 
 *** Keywords ***
 #Setup and Teardown
